@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>JavaScript Crud Operation | Using Html css JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="min.js" defer></script>
+  </head>
+  <body>
+    
+    <!-- <h1 class="animate__animated animate__fadeInUp">imran khan</h1> -->
+
+    <header class="header w-100 bg-dark" style="height: 70px; padding: 0 5rem;">
+        <nav class="d-flex justify-content-between align-items-center h-80">
+            <div class="logo">
+                <a href="#" class="fs-4 fw-bold text-white">code with imran</a>
+            </div>
+            <div class="navbar d-flex align-items-center" style="height: 70px;">
+                <ul class="d-flex align-items-center m-0 fs-5.5" style="gap: 1.5rem;">
+                    <li><a href="#" class="text-white">home</a></li>
+                    <li><a href="#" class="text-white">about</a></li>
+                    <li><a href="#" class="text-white">portfolio</a></li>
+                    <li><a href="#" class="text-white">services</a></li>
+                    <li><a href="#" class="text-white">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="products_section">
+        <div class="container-fluid">
+            <h4 class="text-dark fw-bold fs-2 text-center">JavaScript crud Operation</h4>
+            <div class="content">
+            <div class="header d-flex justify-content-between align-items-center bg-success rounded">
+                <div class="left_side">
+                    <h4 class="text-dark fw-bold fs-4 m-0 text-white">code with imran</h4>
+                </div>
+                <div class="right_side d-flex align-items-center justify-content-end" style="gap: .4rem; width: 50%;">
+                        <input type="search" class="form-control" id="formGroupExampleInput" placeholder="search here ..." style="width: 40%;">
+                    <button class="btn btn-danger m-0" id="delet-all"><i class="fa-solid fa-minus"></i> <span>delet all</span></button>
+                    <button class="btn btn-primary m-0" id="add-new"><i class="fa-solid fa-plus"></i> <span>add new user</span></button>
+                </div>
+            </div>
+
+            <table class="table text-center head" style="border-bottom: 1px solid rgba(0,0,0,.3); margin-top: 2rem;">
+                <tr class="row" style="border: none; background: transparent;">
+                    <td>sr</td>
+                    <td>profile</td>
+                    <td>name</td>
+                    <td>email</td>
+                    <td>mobile</td>
+                    <td>date brith</td>
+                    <td>action</td>
+                </tr>
+              </table>
+
+            <!-- data insertedt area  -->
+            <table class="table table-striped text-center animate__animated animate__fadeInUp" id="data_tab">
+                <tr class="row" id="row_data">
+                    <td class="boxes pt-4">1</td>
+                    <td class="p-2 boxes"><img src="images/download.jpeg" alt="" width="50" height="50" class="rounded-circle"></td>
+                    <td class="boxes pt-4">Imran khan Muhammad</td>
+                    <td class="boxes pt-4">ik672791@gmail.com</td>
+                    <td class="boxes pt-4">03002472740</td>
+                    <td class="boxes pt-4">10/04/2003</td>
+                    <td class="boxes pt-3">
+                        <button class="btn btn-danger btn-sm"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-primary btn-sm"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+                
+              </table>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- ---form section--- -->
+    <section id="form_sec" class="">
+        <div class="container-fluid">
+            <div class="form-col animate__animated animate__fadeInUpBig">
+                <div class="header bg-primary d-flex justify-content-between align-items-center p-2 animate__animated animate__fadeInUpBig">
+                    <h4 class="text-white m-0">add new user</h4>
+                    <div class="button"><button class="btn btn-light btn-sm" id="close-pop"><i class="fa-solid fa-xmark"></i></button></div>
+                </div>
+            <form action="#" class="btn-light">
+                
+                <div class="input-group">
+                    <div class="input-group-text">Name</div>
+                    <input type="text" class="form-control" placeholder="enter your Username" required>
+                  </div>
+                <div class="input-group">
+                    <div class="input-group-text">email</div>
+                    <input type="email" class="form-control" placeholder="enter your email" required>
+                  </div>
+                <div class="input-group">
+                    <div class="input-group-text">mobile</div>
+                    <input type="text" class="form-control" placeholder="enter your number" required>
+                  </div>
+                <div class="input-group">
+                    <div class="input-group-text">date of brith</div>
+                    <input type="date" class="form-control" placeholder="enter your date of brith" required>
+                  </div>
+                <div class="input-group">
+                    <div class="input-group-text">password</div>
+                    <input type="password" class="form-control" placeholder="enter your password" required>
+                  </div>
+               
+                <div class="input-group">
+                    <input type="file" class="form-control" placeholder="enter your pciture">
+                  </div>
+                  <div class="buttons">
+                    <button class="btn btn-danger" disabled id="form-Edite" style="cursor: pointer;">edite</button>
+                    <button class="btn btn-primary" type="submit" id="form-add">add new user</button>
+                  </div>
+            </form>
+            </div>
+        </div>
+    </section>
+
+  </body>
+</html>
